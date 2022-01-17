@@ -81,6 +81,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="servicios\DatosServicio.cs" />
     <Compile Include="servicios\NavegacionServicio.cs" />
     <Compile Include="ventanas\AñadirDialog.xaml.cs">
       <DependentUpon>AñadirDialog.xaml</DependentUpon>
@@ -92,7 +93,9 @@
       <DependentUpon>NuevaPersona.xaml</DependentUpon>
     </Compile>
     <Compile Include="vistasModelo\AñadirDialogVM.cs" />
+    <Compile Include="vistasModelo\ListadoVM.cs" />
     <Compile Include="vistasModelo\MainWindowVM.cs" />
+    <Compile Include="vistasModelo\NuevaPersonaVM.cs" />
     <Page Include="ventanas\AñadirDialog.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
