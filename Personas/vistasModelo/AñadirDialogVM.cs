@@ -9,9 +9,9 @@ namespace Personas.vistasModelo
 {
     class AñadirDialogVM: ObservableObject
     {
-        private String _nacionalidad;
+        private string _nacionalidad;
 
-        public String Nacionalidad
+        public string Nacionalidad
         {
             get { return _nacionalidad; }
             set { SetProperty(ref _nacionalidad, value); }
