@@ -1,6 +1,6 @@
-﻿using clases.Persona;
-using Microsoft.Toolkit.Mvvm.ComponentModel;
+﻿using Microsoft.Toolkit.Mvvm.ComponentModel;
 using Microsoft.Toolkit.Mvvm.Input;
+using Personas.clases;
 using Personas.servicios;
 using System;
 using System.Collections.Generic;
@@ -18,6 +18,7 @@ namespace Personas.vistasModelo
         {
             NuevaPersonaCommand = new RelayCommand(MostrarNuevaPersona);
             ListadoCommand = new RelayCommand(MostrarListado);
+            servicioNavegacion = new NavegacionServicio();
         }
 
         private void MostrarListado()
@@ -31,7 +32,7 @@ namespace Personas.vistasModelo
         }
 
 
-        private readonly NavegacionServicio servicioNavegacion = new NavegacionServicio(); 
+        private readonly NavegacionServicio servicioNavegacion; 
         public RelayCommand NuevaPersonaCommand { get; }
         public RelayCommand ListadoCommand { get; }
 

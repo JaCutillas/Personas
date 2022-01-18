@@ -21,5 +21,10 @@ namespace Personas.servicios
         {
             return new NuevaPersona();
         }
+
+        public bool? CrearDialogAñadir()
+        {
+            return new AñadirDialog().ShowDialog();
+        }
     }
 }
