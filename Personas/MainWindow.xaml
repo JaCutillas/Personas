@@ -5,7 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Personas"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="450" Width="800"
+        xmlns:properties="clr-namespace:Personas.Properties">
     <Window.Resources>
         <Style TargetType="Button">
             <Setter Property="Margin"
@@ -14,7 +15,8 @@
                     Value="150" />
         </Style>
         
-        <Style TargetType="Border">
+        <Style TargetType="Border"
+               x:Key="bordeContent">
             <Setter Property="Margin"
                     Value="15,5,15,15" />
             <Setter Property="BorderBrush"
@@ -32,7 +34,10 @@
             <Button Content="Listado de personas"
                     Command="{Binding Path=ListadoCommand}"/>
         </StackPanel>
-        <Border>
+        <TextBlock DockPanel.Dock="Bottom"
+                   Text="{Binding Source={x:Static properties:Settings.Default}, Path=version, Mode=OneWay}"
+                   FontSize="24"/>
+        <Border Style="{StaticResource ResourceKey= bordeContent}">
             <ContentControl Content="{Binding Path=PestañaActual}"/>
         </Border>
     </DockPanel>
